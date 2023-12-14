@@ -1,0 +1,85 @@
+---
+type: Batch
+timelimit: 4s
+match: Lines
+
+cases:
+  - name: sample1
+    in: |
+      3
+      RYR
+      YBY
+      BYY
+    out: |
+      5
+  - name: sample2
+    in: |
+      9
+      YYRYBBBYR
+      BYYRRBYBB
+      RBRRBRBBY
+      RYRBRYRBR
+      YYBRYYYRB
+      RRYBRYRBR
+      RBYRBRBRB
+      BRYYRBBBR
+      RBBBYBRRY
+    out: |
+      25
+  - name: sample3
+    in: |
+      6
+      RBYRBY
+      BYRBYR
+      YRBYRB
+      RBYRBY
+      BYRBYR
+      YRBYRB
+    out: |
+      1
+  - name: sample4
+    in: |
+      20
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRBRRRRRRRRRRRRYRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRYRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRYRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRBR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+      RRRRRRRRRRRRRRRRRRRR
+    out: |
+      85
+  - name: sample5
+    in: |
+      10
+      RRRRRRRRRR
+      RYRRRRRRRR
+      RRRRYRRRRR
+      RBRRRRRRRR
+      RRRRRRRRYR
+      RBRRRRRRRR
+      RRRRBRRRRR
+      RBRRRRRRRR
+      RRRRRRRRYR
+      RRRRRRRRRR
+    out: |
+      25
+
+extend:
+  - type: Text
+    path: "./d"
+    in: /in/*.txt
+    out: /out/*.txt
